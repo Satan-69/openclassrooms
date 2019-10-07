@@ -80,7 +80,6 @@ header section
     position: relative;
     top: 100px;
     width: 1600px;
-    overflow: hidden;
     margin: auto;
 }
 
@@ -187,7 +186,7 @@ hr::after
 
 #services 
 {
-    margin-top: 100px;
+    padding: 50px 0px;
 }
 
 #services p
@@ -197,7 +196,7 @@ hr::after
     text-align: center;
 }
 
-#presentation_services
+#list_services
 {
     margin: 50px 0px 50px 0px;
     display: flex;
@@ -218,7 +217,7 @@ hr::after
 #projets
 {
     background-color: #F5F5F5;
-    padding: 50px 0px 50px 0px;
+    padding: 50px 0px;
 }
 
 #portfolio
@@ -243,6 +242,7 @@ hr::after
 {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 #portfolio_img img

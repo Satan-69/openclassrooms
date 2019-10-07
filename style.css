@@ -1,0 +1,297 @@
+@font-face {
+    font-family: 'Fontawesome';
+    src: url("./fonts/fontawesome-webfont.ttf");
+}
+
+@font-face {
+    font-family: 'robotobold';
+    src: url("./fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url("./fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'glyphicons';
+    src: url("./fonts/glyphicons-halflings-regular.ttf") format('truetype');
+    src: url("./fonts/glyphicons-halflings-regular.woff") format('woff');
+    src: url("./fonts/glyphicons-halflings-regular.eot") format('eot');
+    src: url("./fonts/glyphicons-halflings-regular.svg") format('svg');
+}
+
+body 
+{
+    width: 100%;
+    margin: auto;
+}
+
+p
+{
+    font-family: 'robotoregular', Arial, Helvetica, sans-serif;
+}
+
+/* NAVBAR */
+
+#navbar
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    position: fixed;
+    top : 0;
+    width: 100%;
+    background-color: #FFF;
+    z-index:1;
+    margin-bottom: 100;
+}
+
+#navbar a
+{
+color: grey;
+text-decoration: none;
+font-family: 'Fontawesome', 'glyphicons', 'robotoregular',"Comic sans MS",Arial, Helvetica, sans-serif;;
+}
+
+.navbtn 
+{
+    border: 3px solid #FFF;
+    height: 100px;
+    background-color: #FFF;
+}
+
+.navbtn:hover
+{
+    border-top: 3px solid #3192b3;
+    border-radius: 1px;
+}
+
+/* SLIDE */
+header section
+{
+    height : 650px;
+}
+#slider
+{  
+    position: relative;
+    top: 100px;
+    width: 1600px;
+    overflow: hidden;
+    margin: auto;
+}
+
+#slider_text
+{
+    display: block;
+    position: absolute;
+    top: calc(50% - 90px);
+    margin-left: 10%;
+    text-align: left;
+    color: white;
+    height: 180px;
+    width: 30%;
+    z-index:1;
+}
+
+#slide1 {
+    position: relative;
+}
+
+#slide2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:-1;
+}
+
+@keyframes switch {
+    0% {
+    opacity:1;
+    }
+    45% {
+    opacity:1;
+    }
+    55% {
+    opacity:0;
+    }
+    100% {
+    opacity:0;
+    }
+}
+
+  #slide1 
+{
+    animation-name: switch;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-direction: alternate;
+}
+
+#slider h2
+{
+text-transform: uppercase;
+font-family: 'robotoregular', Arial, Helvetica, sans-serif;
+}
+
+#webagency
+{
+    color: #4ba4c2;
+}
+
+/* SECTIONS */
+
+h1
+{
+    text-align: center;
+    text-transform: uppercase;
+    font-family:'robotobold', Arial, Helvetica, sans-serif;
+    font-size: 2em;
+}
+
+#services p, #projets p
+{
+    text-align: center;
+}
+
+hr 
+{
+    background-color: rgb(230, 230, 230);
+    width: 150px;   
+    border: none; 
+    height: 1px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+hr::after 
+{
+    content: "";
+    display:block;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-color: #4ba4c2;
+    border-radius: 50%;
+    border: 5px solid white ;
+}
+
+/* SECTION SERVICES */
+
+#services 
+{
+    margin-top: 100px;
+}
+
+#services p
+{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+#presentation_services
+{
+    margin: 50px 0px 50px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#list dt {
+    font-family: 'robotobold', Arial, Helvetica, sans-serif;
+}
+#list dd {
+    margin-bottom: 20px;
+    margin-left: 0px;
+}
+
+/* SECTION PROJETS */
+
+#projets
+{
+    background-color: #F5F5F5;
+    padding: 50px 0px 50px 0px;
+}
+
+#portfolio
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#portfolio_buttons
+{
+    display: flex;
+    justify-content: center;
+}
+
+#portfolio_buttons .btn
+{
+    background-color: #E5E5E5;
+
+}
+
+#portfolio_img
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#portfolio_img img
+{
+    margin: 20px;
+    width: 300px;
+}
+
+/* CONTACT FORM */
+#frame
+{
+    position: relative;
+    width: 100%;
+}
+
+#contactform
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 350px;
+    margin-left: 70%;
+    padding-left: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 75%;
+}
+
+#contactform .text
+{
+    width: 90%;
+    margin: auto;
+    padding: 6px;
+}
+
+
+#send, #infos
+{ 
+    background-color: #4ba4c2;
+    height: 35px;
+    width: auto;
+    color: #FFF;
+    font-weight: bold;
+    border-color: #4ba4c2;
+    border-radius: 4px;
+    border-bottom: 3px solid #3192b3;
+    padding: 0px 10px 0px 10px;
+    cursor: pointer;
+}
+
+#contactform h2
+{
+    font-family: 'robotoregular', Arial, Helvetica, sans-serif;
+}

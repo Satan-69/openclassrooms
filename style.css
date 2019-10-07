@@ -87,14 +87,13 @@ header section
 {
     display: block;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: calc(50% - 90px);
     margin-left: 10%;
     text-align: left;
     color: white;
     height: 180px;
     width: 30%;
-    z-index:1;
+    z-index:0;
 }
 
 #slide1 {

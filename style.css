@@ -16,7 +16,7 @@ body
 }
 
 
-/* NAVBAR */
+/* -----------------NAVBAR----------------- */
 
 #navbar
 {
@@ -37,7 +37,6 @@ body
 {
 color: grey;
 text-decoration: none;
-font-family: 'robotoregular', Arial, Helvetica, sans-serif;;
 }
 
 .navbtn 
@@ -54,16 +53,18 @@ font-family: 'robotoregular', Arial, Helvetica, sans-serif;;
 }
 
 /* SLIDE */
-header section
-{
-    height : 650px;
-}
+
 #slider
 {  
     position: relative;
     top: 100px;
-    width: 1600px;
+    width: auto;
     margin: auto;
+}
+
+#slider img
+{
+    width: 100%;
 }
 
 #slider_text
@@ -92,9 +93,10 @@ header section
 #slide2 {
     position: absolute;
     top: 0;
-    left: 0;
     z-index:-1;
+    width: 100%;
 }
+
  /* ANIMATION SLIDER */
 @keyframes switch {
     0% {
@@ -165,7 +167,7 @@ cursor: pointer;
 }
 
 
-/* SECTIONS */
+/* -----------------SECTIONS GENERAL----------------- */
 
 h1
 {
@@ -209,7 +211,7 @@ hr::after
     border: 5px solid white ;
 }
 
-/* SECTION SERVICES */
+/* -----------------SECTION SERVICES----------------- */
 #anchor_services
 {
     height: 80px;
@@ -280,7 +282,7 @@ dl
     border: 5px solid white ;
 }
 
-/* SECTION PROJETS */
+/* -----------------SECTION PROJETS----------------- */
 #anchor_projets
 {
     height: 80px;
@@ -297,6 +299,8 @@ dl
     display: flex;
     flex-direction: column;
 }
+
+/*PORTFOLIO BUTTONS*/
 
 #portfolio_buttons
 {
@@ -318,6 +322,7 @@ dl
     background-color: #E5E5E5;
     font-size: 0.9em;
     display: block;
+    width: 100px;
 }
 
 .btn_left
@@ -345,14 +350,23 @@ dl
     color: #FFF;
     border: 3px solid #5cadd3;
     border-bottom: 3px solid #468cad;
+    font-weight: bold;
+    text-align: center;
 }
 
   .btn:hover + .arrow
 {
     color: #468cad;
-
 }
 
+.btn:active
+{
+    border-bottom: 2px solid #468cad;
+    text-indent: 2px;
+}
+
+
+/* PORTFOLIO IMAGES */
 #portfolio_img
 {
     display: flex;
@@ -378,6 +392,7 @@ dl
     position: relative;
 }
 
+/* FIGCAPTION */
 .figcaption {
     color: #FFF;
     background-color: rgba(0, 0, 0, 0.5);
@@ -401,7 +416,22 @@ dl
     margin:5px;
 }
 
-/* CONTACT FORM */
+.div_eye
+{
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%) translateX(280px);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5cadd3;
+}
+
+/* -----------------CONTACT FORM----------------- */
 #frame
 {
     position: relative;
@@ -440,3 +470,127 @@ dl
     padding: 0px 10px 0px 10px;
     cursor: pointer;
 }
+
+
+
+
+    /*  CSS POUR LES TABLETTES */
+@media all and (max-width: 1024px)
+{
+        #navbar
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .navbtn 
+    {
+        border: 3px solid #FFF;
+        height: 30px;
+        background-color: #FFF;
+    }
+
+    #services img 
+    {
+        display: none;
+    }
+    #list
+    {
+        margin: auto;
+    }
+
+    iframe
+    {
+       display: none;
+    }
+    #contactform 
+    {
+        position: absolute;
+  
+    }
+
+}
+
+    /* CSS POUR LES MOBILES */
+    @media all and (max-width: 480px)
+    {
+
+        /* HIDE SLIDER */
+        #slider
+        {
+            display: none;
+        }
+
+        .section_presentation 
+        {
+            line-height: 1.2em;
+            width: 75%;
+        }
+
+        #list {
+            width: 90%;
+        }
+
+        #portfolio_buttons
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .btn
+        {
+            padding: 10px;
+            margin: 0;
+        }
+        .btn_left
+        {
+            border-radius: 5px 5px 0 0 ;
+        }
+
+        .btn_right
+        {
+            border-radius: 0 0 5px 5px;
+        }
+
+        .btn:hover + .arrow
+        {
+            display: none;
+        }
+        .btn:active
+        {
+            border-bottom: 3px solid #468cad;   
+        }
+
+        #portfolio_img
+        {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-height: 400px;
+            overflow-y: scroll;
+            width: 300px;
+            background-color: black;
+            margin: auto;
+        }
+
+        #portfolio_img::-webkit-scrollbar {
+            width: 0px;   /* Remove scrollbar space */
+            background: transparent;   /* Optional: just make scrollbar invisible; */
+        }
+        #portfolio_img img
+        {
+            width: 280px;
+            margin: 0;
+        }
+
+        iframe
+        {
+            display: none;
+        }
+        #contactform
+        {
+            margin: auto;
+        }
+    }

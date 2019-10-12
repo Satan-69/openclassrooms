@@ -372,13 +372,6 @@ dl
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /*max-height: 500px;
-    overflow-y: scroll;
-}
-
-#portfolio_img::-webkit-scrollbar {
-    width: 0px;   Remove scrollbar space
-    background: transparent;   Optional: just make scrollbar invisible */
 }
 
 #portfolio_img img
@@ -420,7 +413,8 @@ dl
 {
     position: absolute;
     top: 0;
-    transform: translateY(-50%) translateX(280px);
+    right: 25px;
+    transform: translateY(-50%);
     height: 40px;
     width: 40px;
     border-radius: 50%;
@@ -475,7 +469,7 @@ dl
 
 
     /*  CSS POUR LES TABLETTES */
-@media all and (max-width: 1024px)
+@media all and (max-device-width: 1024px)
 {
         #navbar
     {
@@ -500,12 +494,11 @@ dl
 
     iframe
     {
-       display: none;
+        display: none;
     }
-    #contactform 
+    #contactform
     {
-        position: absolute;
-  
+       width: 100%;        
     }
 
 }
@@ -570,9 +563,11 @@ dl
             justify-content: center;
             max-height: 400px;
             overflow-y: scroll;
-            width: 300px;
-            background-color: black;
-            margin: auto;
+            overflow-x: hidden;
+            width: 80%;
+            max-width: 350px;
+            background-color: #000;
+            margin: 0 auto;
         }
 
         #portfolio_img::-webkit-scrollbar {
@@ -581,8 +576,13 @@ dl
         }
         #portfolio_img img
         {
+            width: 300px;
+            margin: auto;
+        }
+
+        .figcaption
+        {
             width: 280px;
-            margin: 0;
         }
 
         iframe
@@ -591,6 +591,7 @@ dl
         }
         #contactform
         {
-            margin: auto;
+           width: 100%;
+           margin-bottom: 10px;
         }
     }

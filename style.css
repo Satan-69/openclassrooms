@@ -30,20 +30,18 @@ body
     width: 100%;
     background-color: #FFF;
     z-index:1;
-    margin-bottom: 100;
-}
-
-#navbar a
-{
-    color: grey;
-    text-decoration: none;
 }
 
 .navbtn 
 {
-    border: 3px solid #FFF;
+    display: inline-block;
     height: 100px;
+    box-sizing: border-box;
+    border: 3px solid #FFF;
     background-color: #FFF;
+    color: grey;
+    text-decoration: none;
+    padding-top: 35px;
 }
 
 .navbtn:hover
@@ -241,7 +239,7 @@ dl
 .list_items 
 {
     display: flex;
-    flex: row;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -322,7 +320,7 @@ dl
 {
     padding: 10px;
     margin: 50px 0;
-    border: 3px solid #E5E5E5;
+    border: 3px solid transparent;
     cursor: pointer;
     background-color: #E5E5E5;
     font-size: 0.9em;
@@ -354,7 +352,7 @@ dl
 {
     background-color: #5cadd3;
     color: #FFF;
-    border: 3px solid #5cadd3;
+    border: 3px solid transparent;
     border-bottom: 3px solid #468cad;
     font-weight: bold;
     text-align: center;
@@ -439,7 +437,10 @@ dl
     position: relative;
     width: 100%;
 } 
-
+iframe
+{
+    width: 100%;
+}
 #contactform
 {
     position: absolute;
@@ -466,7 +467,7 @@ dl
     width: auto;
     color: #FFF;
     font-weight: bold;
-    border-color: #5cadd3;
+    border-color: transparent;
     border-radius: 4px;
     border-bottom: 3px solid #3192b3;
     padding: 0px 10px 0px 10px;
@@ -483,9 +484,10 @@ dl
     }
     .navbtn 
     {
-        border: 3px solid #FFF;
+        border: 3px solid transparent;
         height: 30px;
         background-color: #FFF;
+        padding-top: 0;
     }
 
     #slider_text 

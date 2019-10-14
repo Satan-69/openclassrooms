@@ -432,15 +432,22 @@ dl
 }
 
 /* -----------------CONTACT FORM----------------- */
+#anchor_footer
+{
+    height: 80px;
+}
+
 #frame
 {
     position: relative;
     width: 100%;
 } 
+
 iframe
 {
     width: 100%;
 }
+
 #contactform
 {
     position: absolute;
@@ -533,6 +540,8 @@ iframe
     .figcaption
     {
         width: 260px;
+
+        line-height: 1em;
     }
 
     iframe

@@ -32,24 +32,32 @@ body
     z-index:1;
 }
 
+#burgermenu
+{
+    display: none;
+}
 .navbtn 
 {
     display: inline-block;
     height: 100px;
     box-sizing: border-box;
-    border: 3px solid #FFF;
+    border: 3px solid transparent;
     background-color: #FFF;
     color: grey;
     text-decoration: none;
+    padding: 0 10px;
     padding-top: 35px;
 }
 
 .navbtn:hover
 {
-    border-top: 3px solid #3192b3;
-    border-radius: 1px;
+    border-top: 3px solid #5cadd3;
 }
 
+#burger
+{
+    display: none;
+}
 /* SLIDE */
 
 #slider
@@ -484,17 +492,91 @@ iframe
     /*  CSS POUR LES TABLETTES */
 @media all and (max-device-width: 1024px)
 {
-        #navbar
+
+
+    /*BURGER MENU*/
+    #classic_menu
     {
-        display: flex;
-        flex-direction: column;
+        display: none;
     }
-    .navbtn 
+
+    #burgermenu
     {
-        border: 3px solid transparent;
-        height: 30px;
-        background-color: #FFF;
-        padding-top: 0;
+        display: initial;
+    }
+
+    a
+    {
+    text-decoration: none;
+    color: grey;
+    text-align: center;
+    transition: color 0.3s ease;
+    }
+
+    a:hover
+    {
+    color: #5cadd3;
+    }
+
+    #menuToggle
+    {
+    display: block;
+    position: relative;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    }
+
+    #menuToggle input
+    {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    }
+
+    #menuToggle span
+    {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #5cadd3;
+    border-radius: 3px;
+    z-index: 1;
+    }
+
+    #menu
+    {
+    position: absolute;
+    left: -75px;
+    width: 150px;
+    padding: 10px;
+    padding-top: 20px;
+    background: white;
+    list-style-type: none;
+    transform: translate(0, -150%);
+    transition: transform 0.5s ease-in-out;
+    }
+
+    #menu li
+    {
+    padding: 10px 0;
+    
+    }
+
+    /*
+    * And let's slide it in from the left
+    */
+    #menuToggle input:checked ~ ul
+    {
+    transform: none;
     }
 
     #slider_text 
@@ -517,30 +599,18 @@ iframe
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        max-height: 400px;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        width: 80%;
         max-width: 750px;
-        background-color: #000;
         margin: 0 auto;
-    }
-
-    #portfolio_img::-webkit-scrollbar {
-        width: 0px;   /* Remove scrollbar space */
-        background: transparent;   /* Optional: just make scrollbar invisible; */
     }
 
     #portfolio_img img
     {
         width: 280px;
-        margin: 0 0 20px 0;
     }
 
     .figcaption
     {
         width: 260px;
-
         line-height: 1em;
     }
 
@@ -568,6 +638,11 @@ iframe
     /* CSS POUR LES MOBILES */
  @media only screen and (min-device-width : 320px) and (max-device-width : 600px)
 {
+    #menu
+    {
+        width: 100px;
+        left: -65px;
+    }
     /* HIDE SLIDER */
     #slider
     {

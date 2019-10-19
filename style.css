@@ -505,8 +505,9 @@ iframe
         display: initial;
     }
 
-    a
+    #menu a
     {
+        display: block;
     text-decoration: none;
     color: grey;
     text-align: center;
@@ -560,21 +561,17 @@ iframe
     padding: 10px;
     padding-top: 20px;
     background: white;
-    list-style-type: none;
     transform: translate(0, -150%);
     transition: transform 0.5s ease-in-out;
     }
 
-    #menu li
+    #menu a
     {
     padding: 10px 0;
     
     }
 
-    /*
-    * And let's slide it in from the left
-    */
-    #menuToggle input:checked ~ ul
+    #menuToggle input:checked ~ #menu
     {
     transform: none;
     }

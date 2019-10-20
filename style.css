@@ -225,7 +225,7 @@ hr
 }
 
 
-#list_services
+#image_list
 {
     margin: 50px 0px;
     display: flex;
@@ -236,12 +236,6 @@ hr
 #list 
 {
     width: 500px;
-}
-
-dl
-{
-    display: flex;
-    flex-direction: column;
 }
 
 .list_items 
